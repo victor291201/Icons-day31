@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background-color: #F3F3F3;
+  font-family: Poppins;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+div{
+  background-color: red;
+  width: 7px;
+  height: 7px;
+  transform: translateY(50vh);
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  justify-content:space-around;
+  width: 380px;
+  position: relative;
+}
+.icon{
+  transition: 1s all ease;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icn{
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 8px 15px -4px rgba(0,0,0,0.59);
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+.tooltip{
+  color:white;
+  font-size: 12px;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1;
+  opacity: 0;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 8px 15px -4px rgba(0,0,0,0.59);
+}
+.tooltip::before{
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: " ";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transform: translateY(9px) rotate(45deg) translateZ(1px);
+  box-shadow: 1px 8px 15px -4px rgba(0,0,0,0.59);
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+  z-index: -1;
+}
+.icn:hover +.tooltip{
+  transform: translateY(-55px);
+  opacity: 1;
+}
+.icn:hover{
+  color:white;
+}
+.codepen .icn:hover,.codepen  .tooltip::before,.codepen .tooltip{
+  background-color: rgb(58, 58, 59);
+}
+.github .icn:hover,.github  .tooltip::before,.github .tooltip{
+  background-color: rgb(23,21,21);
+}
+.linkedin .icn:hover,.linkedin  .tooltip::before,.linkedin .tooltip{
+  background-color: rgb(14, 118, 168);
+}
+.facebook .icn:hover,.facebook  .tooltip::before,.facebook .tooltip{
+  background-color: rgb(66, 103, 178);
+}
+.youtube .icn:hover,.youtube  .tooltip::before,.youtube .tooltip{
+  background-color: rgb(255, 0, 0);
+}
